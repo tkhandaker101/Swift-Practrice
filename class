@@ -1,0 +1,45 @@
+import UIKit
+print("hello tushar")
+
+// claasss
+
+class Mobile {
+    var name = ""
+    var size: Int = 0
+    var price: Double = 0.0
+    
+    func displayInfo () -> Void {
+        print(" Mobile name : \(name)")
+        print(" Mobile size : \(size)")
+        print(" Mobile price: \(price)")
+
+    }
+}
+// basic class and object
+
+let myMobile:Mobile  = Mobile ()
+myMobile.name = "A50"
+myMobile.size = 6
+myMobile.price = 123.56
+myMobile.displayInfo()
+
+// inheritance
+
+class Android: Mobile {
+    
+    var buildNumber = 0
+    var  androidVersion = 0.0
+    
+    override func displayInfo() {
+        super.displayInfo()
+        print("Model : \(name)") // properties from Mobile Class
+        print("Android Version: \(androidVersion)")
+    }
+    
+
+}
+
+var obj: Android = Android()
+obj.name = "GALAXY S"
+obj.androidVersion = 10.2
+obj.displayInfo()
