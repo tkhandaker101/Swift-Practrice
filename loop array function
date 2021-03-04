@@ -1,0 +1,55 @@
+import UIKit
+print("hello tushar")
+var ara: [Int] = [6,2,3,1,12,2,5,63,9]
+var name = ["jon","mark","cipher","edge"]
+
+for index in 0..<ara.count{
+    print("at index : \(index + 1) value = \(ara[index])")
+}
+for i in ara
+{
+    print(i)
+}
+
+for index in 0..<name.count{
+    print("at index : \(index + 1) value = \(name[index])")
+}
+for i in name
+{
+    print(i)
+}
+
+ara.forEach {
+    x in print(x)
+    print("for each")
+    
+}
+var newArr: [Int] = []
+ara.forEach{i in newArr.append(i+1)}
+print(newArr)
+// less than 10
+newArr.filter{ i in i < 10 }.forEach { i in print (i)}
+
+// multi value return
+func sumAverage (num: [Int]) ->(Int, Double){
+    var sum: Int = 0 ;
+    for i in num{
+        sum = sum + i
+    }
+    let avg = (Double(sum) / (Double)(num.count))
+
+    return (sum,avg)
+}
+
+let someAvg = sumAverage(num: ara)
+debugPrint(someAvg.1)
+
+// extension of array as like built in function 
+extension Array{
+    
+    func secondMax () -> Void {
+        print("OK")
+   
+    }
+    
+}
